@@ -1,0 +1,40 @@
+<theatre-details></theatre-details>
+<div class="main-container">
+    <div class="booking-details-container">
+        <form [formGroup]="bookingDetailsForm">
+            <div class="row">
+                <input
+                    class="form-control"
+                    formControlName="name"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                />
+            </div>
+            <div class="row mt-4">
+                <input
+                    class="form-control"
+                    formControlName="emailAddress"
+                    type="text"
+                    name="name"
+                    placeholder="E Mail Address"
+                />
+            </div>
+            <country-details formControlName="countryDetails"></country-details>
+            <div class="row mt-4">
+                <button
+                    type="submit"
+                    (click)="confirmBooking()"
+                    class="btn btn-primary mb-3"
+                >
+                    Confirm booking
+                </button>
+            </div>
+        </form>
+    </div>
+    <seat-summary
+        [theatre]="theatre"
+        [showTimeIndex]="showTimeIndex"
+        [showConfirmBtns]="false"
+    ></seat-summary>
+</div>

@@ -1,0 +1,79 @@
+:host {
+    flex: 2;
+    margin: 1rem 0;
+
+    .screen {
+        border-bottom: 3px solid var(--border-grey);
+        width: 60%;
+        margin: 0 auto 2rem;
+        text-align: center;
+        color: var(--grey);
+        padding: 0 0 0.5rem;
+    }
+    .seatNo {
+        text-align: center;
+        font-size: 12px;
+        width: 20px;
+        display: inline-block;
+        color: #b9bcbf;
+        font-weight: 100;
+    }
+    .seats {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .rows {
+        margin: 0.5rem 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    .seat {
+        border-radius: 3px;
+        font-size: 10px;
+        width: 35px;
+        height: 30px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .seat-gaps {
+        margin-right: 5% !important;
+    }
+}
+.reserved-seat {
+    background: var(--red);
+    color: var(--white);
+}
+.selected-seat {
+    background: var(--vibrant-green);
+    cursor: pointer;
+    &:hover {
+        background: var(--dark-green);
+    }
+}
+.free-seat {
+    background: #e6e9ec;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--grey);
+    }
+}
+
+.fadeInUp {
+    animation-duration: 0.45s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

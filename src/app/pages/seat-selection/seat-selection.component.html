@@ -1,0 +1,17 @@
+<theatre-details></theatre-details>
+<time-slots
+    [theatre]="theatre"
+    (showTimeIndex)="changeTimeSlot($event)"
+></time-slots>
+<div class="container px-0">
+    <main class="inner-container">
+        <seat-blueprint
+            [theatre]="theatre"
+            [showTimeIndex]="showTimeIndex"
+        ></seat-blueprint>
+        <seat-summary
+            [theatre]="theatre"
+            [showTimeIndex]="showTimeIndex"
+        ></seat-summary>
+    </main>
+</div>

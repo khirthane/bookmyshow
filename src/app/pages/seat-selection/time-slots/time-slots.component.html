@@ -1,0 +1,13 @@
+<div class="time-slots">
+    <ul>
+        <li *ngFor="let show of showTime; let i = index">
+            <button
+                class="time-slots-btn"
+                (click)="changeTimeSlot(i)"
+                [class.active]="selectedSlotIndex === i"
+            >
+                {{ show.showTime }}
+            </button>
+        </li>
+    </ul>
+</div>

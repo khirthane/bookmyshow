@@ -1,0 +1,24 @@
+.time-slots {
+    ul {
+        margin: 16px 0;
+        padding: 0;
+        li {
+            list-style-type: none;
+            display: inline-block;
+        }
+        .time-slots-btn {
+            padding: 6px 16px;
+            background: var(--border-grey);
+            margin-right: 16px;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+
+            &.active {
+                background: var(--vibrant-green);
+            }
+        }
+    }
+}

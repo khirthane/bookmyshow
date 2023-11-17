@@ -1,0 +1,16 @@
+<ng-container *ngIf="movie">
+    <div class="movie-details">
+        <div class="movie-poster">
+            <img height="150px" width="150px" [src]="movie.Poster" />
+        </div>
+        <div class="show-details">
+            <h3 class="movie-title mb-1">
+                {{ movie.Title }}
+                <span class="movie-rating">{{ movie.imdbRating }}</span>
+            </h3>
+            <div class="movie-genre">{{ movie.Genre }}</div>
+            <p class="movie-synopsis">{{ movie.Plot }}</p>
+            <div class="theatre-name">{{ movie.Actors }}</div>
+        </div>
+    </div>
+</ng-container>

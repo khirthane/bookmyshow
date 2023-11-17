@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="movies">
+        <div class="movies-card" *ngFor="let movie of movies">
+            <div class="movie-name">
+                <div class="movie-poster" (click)="onClickMovie(movie.id)">
+                    <img
+                        [src]="movie.poster"
+                        alt="movie.movie_name"
+                        width="200"
+                    />
+                </div>
+                <div class="movie-name">
+                    {{ movie.movie_name }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

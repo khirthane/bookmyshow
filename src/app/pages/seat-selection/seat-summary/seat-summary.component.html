@@ -1,0 +1,52 @@
+<div class="summary fadeInUp">
+    <div class="summary-title">{{ "ticketSummary" | translate }}</div>
+    <div *ngIf="selected.length == 0" class="noSeat">
+        <span>{{ "selectYourSeats" | translate }}</span>
+    </div>
+    <div *ngIf="selected.length > 0" class="mt-4">
+        <div class="rows fadeInUp" style="animation-delay: 0ms">
+            <div class="rows-title">{{ "seatsReserved" | translate }}</div>
+            <div class="rows-length">{{ selected.length }}</div>
+            <div class="rows-total">{{ selected.join(", ") }}</div>
+        </div>
+        <div class="rows fadeInUp" style="animation-delay: 100ms">
+            <div class="rows-title">{{ "ticketsPrice" | translate }}</div>
+            <div class="rows-length">
+                {{ ticketPrice }} * {{ selected.length }}
+            </div>
+            <div class="rows-total">
+                {{ currency }}.{{ ticketPrice * selected.length }}
+            </div>
+        </div>
+        <div class="rows fadeInUp" style="animation-delay: 200ms">
+            <div class="rows-title">{{ "convenienceFee" | translate }}</div>
+            <div class="rows-length"></div>
+            <div class="rows-total">{{ currency }}.{{ convFee }}</div>
+        </div>
+        <div class="rows total fadeInUp" style="animation-delay: 300ms">
+            <div class="rows-title">{{ "total" | translate }}</div>
+            <div class="rows-length"></div>
+            <div class="rows-total">
+                {{ currency }}.{{ ticketPrice * selected.length + convFee }}
+            </div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="action-buttons fadeInUp" *ngIf="showConfirmBtns">
+            <button
+                (click)="OnClickClearTickets()"
+                [disabled]="selected.length === 0"
+                class="btn btn-default"
+            >
+                {{ "clearTickets" | translate }}
+            </button>
+            <button
+                (click)="OnClickBuyTickets()"
+                [disabled]="selected.length === 0"
+                class="btn btn-success"
+            >
+                {{ "buyTickets" | translate }}
+            </button>
+        </div>
+    </div>
+</div>

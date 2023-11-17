@@ -1,0 +1,71 @@
+.summary {
+    height: 100%;
+    font-size: 14px;
+}
+:host {
+    background: var(--light-blue);
+    flex: 0.8;
+    padding: 1rem;
+    position: relative;
+    color: var(--dark-grey);
+    border-radius: 5px;
+
+    .summary-title {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .rows {
+        margin: 2rem auto;
+        font-weight: 100;
+        display: flex;
+    }
+    .rows-title {
+        flex: 2;
+        font-weight: 400;
+    }
+    .rows-length {
+        flex: 0.7;
+    }
+    .rows-total {
+        flex: 1.5;
+        text-align: right;
+    }
+    .total {
+        border-top: 1px solid var(--border-grey);
+        font-weight: 400;
+        padding: 1rem 0;
+    }
+}
+.noSeat {
+    display: flex;
+    height: 100%;
+    span {
+        margin: auto;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #cbccce;
+    }
+}
+.action-buttons {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+}
+
+.fadeInUp {
+    animation-duration: 0.45s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

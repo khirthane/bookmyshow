@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "app/color.scss";
+@import "bootstrap/scss/bootstrap";
+html {
+    font-size: 14px;
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue";
+    font-size: 12px;
+    background: var(--bg-grey) !important;
+    color: var(--dark-grey) !important;
+}
+/* Importing Bootstrap SCSS file. */

@@ -1,0 +1,50 @@
+<form [formGroup]="personalDetailsForm" class="country-details-contiainer">
+    <div class="row mt-4">
+        <select
+            class="form-select"
+            aria-label="Countries"
+            formControlName="country"
+            (change)="onChangeCountry($event)"
+        >
+            <option selected value="">Countries</option>
+            <option
+                *ngFor="let country of countriesList"
+                [value]="country.iso3"
+            >
+                {{ country.name }}
+            </option>
+        </select>
+    </div>
+    <div class="row mt-4">
+        <select
+            class="form-select"
+            aria-label="States"
+            formControlName="state"
+            (change)="onChangeState($event)"
+        >
+            <option selected value="">States</option>
+            <option *ngFor="let state of statesList" [value]="state.name">
+                {{ state.name }}
+            </option>
+        </select>
+    </div>
+
+    <div class="row mt-4">
+        <select class="form-select" formControlName="city" aria-label="Cities">
+            <option selected value="">Cities</option>
+            <option *ngFor="let city of citiesList" [value]="city">
+                {{ city }}
+            </option>
+        </select>
+    </div>
+
+    <div class="row mt-4">
+        <input
+            type="text"
+            class="form-control"
+            id="pincode"
+            formControlName="pincode"
+            placeholder="Pincode"
+        />
+    </div>
+</form>

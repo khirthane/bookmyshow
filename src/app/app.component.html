@@ -1,0 +1,21 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="logo col-10"></div>
+            <div class="change-langauage col-2 mt-3">
+                <select
+                    class="form-select"
+                    aria-label="Languages"
+                    (change)="onChangeLanguage($event)"
+                >
+                    <option *ngFor="let lang of langauges" [value]="lang.value">
+                        {{ lang.language }}
+                    </option>
+                </select>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="booking container">
+    <router-outlet></router-outlet>
+</div>

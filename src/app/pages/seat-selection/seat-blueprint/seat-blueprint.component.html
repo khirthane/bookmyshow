@@ -1,0 +1,19 @@
+<div class="screen">{{ "screen" | translate }}</div>
+<div class="seats">
+    <div
+        class="rows fadeInUp"
+        [ngStyle]="{ 'animation-delay': rowIndex + '00ms' }"
+        *ngFor="let row of rows; let rowIndex = index"
+    >
+        <div
+            class="seatBox"
+            [ngClass]="getSeatStyle(i)"
+            *ngFor="let col of cols; let i = index"
+            (click)="seatClicked(row + i)"
+        >
+            <span class="seat" [ngClass]="getSeatStatus(row + i)">{{
+                row + i
+            }}</span>
+        </div>
+    </div>
+</div>

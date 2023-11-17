@@ -1,0 +1,13 @@
+:host {
+    margin-top: 20px;
+}
+.inner-container {
+    color: var(--dark-grey);
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 980px) {
+    .inner-container {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,31 @@
+.movie-details {
+    display: flex;
+}
+.movie-poster {
+    width: 160px;
+    height: 160px;
+    background-color: #bac0d463;
+    padding: 5px;
+}
+.movie-synopsis {
+    font-size: 12px;
+    color: var(--grey);
+    margin: 0.5rem 0;
+}
+.movie-rating {
+    font-size: 12px;
+    background: var(--vibrant-green);
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    color: var(--white);
+    vertical-align: middle;
+}
+.movie-genre {
+    text-transform: capitalize;
+    color: var(--grey);
+    font-size: 12px;
+}
+.show-details {
+    padding: 0 1rem;
+}
